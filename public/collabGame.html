@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Color Game</title>
+        <meta charset="utf-8" />
+        <script src="https://aframe.io/releases/1.1.0/aframe.min.js"></script>
+    </head>
+
+    <body>
+
+        <a-scene background="color:rgb(0, 0, 0);">
+            <a-entity camera wasd-controls look-controls position="0 1.6 0">
+                <a-entity cursor="rayOrigin:mouse;" raycaster="far:20; interval:200; objects:.interactive"></a-entity>
+            </a-entity>
+
+            <!-- panels that will change color -->
+            <a-entity id = "ground1" geometry="primitive:plane; width:7; height:7;" material="color:white;" position="-5 0.01 0" rotation="-90 0 0"></a-entity>
+            <a-entity id = "ground2" geometry="primitive:plane; width:7; height:7;" material="color:white;" position="2 0.01 0" rotation="-90 0 0"></a-entity>
+            <a-entity id = "ground3" geometry="primitive:plane; width:7; height:7;" material="color:white;" position="-5 0.01 -7" rotation="-90 0 0"></a-entity>
+            <a-entity id = "ground4" geometry="primitive:plane; width:7; height:7;" material="color:white;" position="2 0.01 -7" rotation="-90 0 0"></a-entity> -->
+
+            <!-- buttons for ground1 -->
+            <a-entity id="red_g1" position="-3 0.6 -1">
+                <a-entity class="button interactive" position="0 0.6 0" geometry="primitive:cylinder; radius:0.15; height:0.2;" material="color:rgb(255, 100, 100)"
+                            animation__mouseenter="property:material.color; type:color; to:rgb(255, 0, 0); startEvents:mouseenter; dur:200"
+                            animation__mouseleave="property:material.color; type:color; to:rgb(255, 100, 100); startEvents:mouseleave; dur:200"
+                            animation__click="property:position.y; from:0.55; to:0.6; startEvents:click; dur:300" shadow></a-entity>
+                <a-entity position="0 0.3 0" geometry="primitive:box; width:0.5; depth:0.5; height:0.6;" material="color:rgb(255, 255, 255)" shadow></a-entity>
+            </a-entity>
+
+            <a-entity id="blue_g1" position="-5 0.6 -1">
+                <a-entity class="button interactive" position="0 0.6 0" geometry="primitive:cylinder; radius:0.15; height:0.2;" material="color:rgb(100, 100, 255)"
+                            animation__mouseenter="property:material.color; type:color; to:rgb(0, 0, 255); startEvents:mouseenter; dur:200"
+                            animation__mouseleave="property:material.color; type:color; to:rgb(100, 100, 255); startEvents:mouseleave; dur:200"
+                            animation__click="property:position.y; from:0.55; to:0.6; startEvents:click; dur:300" shadow></a-entity>
+                <a-entity position="0 0.3 0" geometry="primitive:box; width:0.5; depth:0.5; height:0.6;" material="color:rgb(255, 255, 255)" shadow></a-entity>
+            </a-entity>
+
+            <!-- buttons for ground2 -->
+            <a-entity id="red_g2" position="2.5 0.6 -1">
+                <a-entity class="button interactive" position="0 0.6 0" geometry="primitive:cylinder; radius:0.15; height:0.2;" material="color:rgb(255, 100, 100)"
+                            animation__mouseenter="property:material.color; type:color; to:rgb(255, 0, 0); startEvents:mouseenter; dur:200"
+                            animation__mouseleave="property:material.color; type:color; to:rgb(255, 100, 100); startEvents:mouseleave; dur:200"
+                            animation__click="property:position.y; from:0.55; to:0.6; startEvents:click; dur:300" shadow></a-entity>
+                <a-entity position="0 0.3 0" geometry="primitive:box; width:0.5; depth:0.5; height:0.6;" material="color:rgb(255, 255, 255)" shadow></a-entity>
+            </a-entity>
+
+            <a-entity id="blue_g2" position="0 0.6 -1">
+                <a-entity class="button interactive" position="0 0.6 0" geometry="primitive:cylinder; radius:0.15; height:0.2;" material="color:rgb(100, 100, 255)"
+                            animation__mouseenter="property:material.color; type:color; to:rgb(0, 0, 255); startEvents:mouseenter; dur:200"
+                            animation__mouseleave="property:material.color; type:color; to:rgb(100, 100, 255); startEvents:mouseleave; dur:200"
+                            animation__click="property:position.y; from:0.55; to:0.6; startEvents:click; dur:300" shadow></a-entity>
+                <a-entity position="0 0.3 0" geometry="primitive:box; width:0.5; depth:0.5; height:0.6;" material="color:rgb(255, 255, 255)" shadow></a-entity>
+            </a-entity>
+
+            <!-- buttons for ground3 -->
+            <a-entity id="red_g3" position="-3 0.6 -8">
+                <a-entity class="button interactive" position="0 0.6 0" geometry="primitive:cylinder; radius:0.15; height:0.2;" material="color:rgb(255, 100, 100)"
+                            animation__mouseenter="property:material.color; type:color; to:rgb(255, 0, 0); startEvents:mouseenter; dur:200"
+                            animation__mouseleave="property:material.color; type:color; to:rgb(255, 100, 100); startEvents:mouseleave; dur:200"
+                            animation__click="property:position.y; from:0.55; to:0.6; startEvents:click; dur:300" shadow></a-entity>
+                <a-entity position="0 0.3 0" geometry="primitive:box; width:0.5; depth:0.5; height:0.6;" material="color:rgb(255, 255, 255)" shadow></a-entity>
+            </a-entity>
+
+            <a-entity id="blue_g3" position="-5 0.6 -8">
+                <a-entity class="button interactive" position="0 0.6 0" geometry="primitive:cylinder; radius:0.15; height:0.2;" material="color:rgb(100, 100, 255)"
+                            animation__mouseenter="property:material.color; type:color; to:rgb(0, 0, 255); startEvents:mouseenter; dur:200"
+                            animation__mouseleave="property:material.color; type:color; to:rgb(100, 100, 255); startEvents:mouseleave; dur:200"
+                            animation__click="property:position.y; from:0.55; to:0.6; startEvents:click; dur:300" shadow></a-entity>
+                <a-entity position="0 0.3 0" geometry="primitive:box; width:0.5; depth:0.5; height:0.6;" material="color:rgb(255, 255, 255)" shadow></a-entity>
+            </a-entity>
+
+            <!-- buttons for ground4 -->
+            <a-entity id="red_g4" position="2.5 0.6 -8">
+                <a-entity class="button interactive" position="0 0.6 0" geometry="primitive:cylinder; radius:0.15; height:0.2;" material="color:rgb(255, 100, 100)"
+                            animation__mouseenter="property:material.color; type:color; to:rgb(255, 0, 0); startEvents:mouseenter; dur:200"
+                            animation__mouseleave="property:material.color; type:color; to:rgb(255, 100, 100); startEvents:mouseleave; dur:200"
+                            animation__click="property:position.y; from:0.55; to:0.6; startEvents:click; dur:300" shadow></a-entity>
+                <a-entity position="0 0.3 0" geometry="primitive:box; width:0.5; depth:0.5; height:0.6;" material="color:rgb(255, 255, 255)" shadow></a-entity>
+            </a-entity>
+
+            <a-entity id="blue_g4" position="0 0.6 -8">
+                <a-entity class="button interactive" position="0 0.6 0" geometry="primitive:cylinder; radius:0.15; height:0.2;" material="color:rgb(100, 100, 255)"
+                            animation__mouseenter="property:material.color; type:color; to:rgb(0, 0, 255); startEvents:mouseenter; dur:200"
+                            animation__mouseleave="property:material.color; type:color; to:rgb(100, 100, 255); startEvents:mouseleave; dur:200"
+                            animation__click="property:position.y; from:0.55; to:0.6; startEvents:click; dur:300" shadow></a-entity>
+                <a-entity position="0 0.3 0" geometry="primitive:box; width:0.5; depth:0.5; height:0.6;" material="color:rgb(255, 255, 255)" shadow></a-entity>
+            </a-entity>
+
+            <!-- this is to reset the color of the panels -->
+            <a-entity id="restart" position="-1.5, 0.6, -11.5">
+                <a-entity class="button interactive" position="0 0.6 0" geometry="primitive:cylinder; radius:0.15; height:0.2;" material="color:rgb(100, 255, 100)"
+                            animation__mouseenter="property:material.color; type:color; to:rgb(0, 255, 0); startEvents:mouseenter; dur:200"
+                            animation__mouseleave="property:material.color; type:color; to:rgb(100, 255, 100); startEvents:mouseleave; dur:200"
+                            animation__click="property:position.y; from:0.55; to:0.6; startEvents:click; dur:300" shadow></a-entity>
+                <a-entity position="0 0.3 0" geometry="primitive:box; width:0.5; depth:0.5; height:0.6;" material="color:rgb(255, 255, 255)" shadow></a-entity>
+            </a-entity>
+
+        <!-- banner for text -->
+        <a-box color="white" position = "-1.5, 5, -11.5" rotation = "0, 0, 0" height= "3.5" depth = "0.1" width = "9"></a-box>
+        <a-text id= "banner" value= "Welcome!" color ="black" position = "-5, 5.7, -11.4" width = "10"></a-text>
+        <a-text id= "bannerStart" value= " " color ="black" position = "-3.5, 4, -11.4" width = "9"></a-text>
+        
+        </a-scene>
+
+        <script src="/socket.io/socket.io.js"></script>
+        <script>
+
+            var playerColor = null;
+            var playerId = null;
+            const socket = io();
+
+            socket.on('connect', (userData) => {
+                console.log('I exist! ');
+
+        //this is to connect the buttons to the server when pressed, all have a unique number that is sent through that will be used later to differentate what panel will be changed
+                document.querySelector('#red_g1').querySelector('.button').addEventListener('click', function(){
+                    socket.emit('red', '1', playerId);
+                });
+
+                document.querySelector('#blue_g1').querySelector('.button').addEventListener('click', function(){
+                    socket.emit('blue', '1', playerId);
+                });
+
+                document.querySelector('#red_g2').querySelector('.button').addEventListener('click', function(){
+                    socket.emit('red', '2', playerId);
+                });
+
+                document.querySelector('#blue_g2').querySelector('.button').addEventListener('click', function(){
+                    socket.emit('blue', '2', playerId);
+                });
+                document.querySelector('#red_g3').querySelector('.button').addEventListener('click', function(){
+                    socket.emit('red', '3', playerId);
+                });
+
+                document.querySelector('#blue_g3').querySelector('.button').addEventListener('click', function(){
+                    socket.emit('blue', '3', playerId);
+                });
+                document.querySelector('#red_g4').querySelector('.button').addEventListener('click', function(){
+                    socket.emit('red', '4', playerId);
+                });
+
+                document.querySelector('#blue_g4').querySelector('.button').addEventListener('click', function(){
+                    socket.emit('blue', '4', playerId);
+                });
+
+                document.querySelector('#restart').querySelector('.button').addEventListener('click', function(){
+                    socket.emit('restart', playerId);
+                });
+
+            });
+
+            
+            //listen to event from server
+            socket.on('color_change', (data1, data2) => {
+                let colorStr = 'rgb(' + data1.r + ',' + data1.g + ',' + data1.b + ')';
+                let planeStr = data2;
+                console.log('color_change: ' + colorStr + " " + planeStr);
+                document.querySelector('#ground' + planeStr).setAttribute('material', {color:colorStr});
+    
+            });
+    
+            // now that player is allowed to play, they are assigned color depending on who loads in first
+            socket.on('playerAcepted', (data1, data2) => {
+                console.log(data2);
+                playerId = data1;
+                playerColor = data2;
+                console.log('this is working: ' + playerId + ' ' + playerColor);
+                document.querySelector('#banner').setAttribute('value', 'You are ' + playerColor + ' , press ' + playerColor + ' button to win');
+    
+            });
+            //if player discconects info is removed and announcement is made
+            socket.on('playerDisconnect', (data) => {
+                document.querySelector('#bannerStart').setAttribute('value', 'Player ' + data + ' has left');
+
+            });
+
+            //once panels are all one color game ends and the time it took to complete is posted
+            socket.on('gameCompleted', (data1, data2) => {
+                    console.log( 'Game Completed!');
+                    let seconds = data2/1000;   
+                    document.querySelector('#banner').setAttribute('value', 'Game completed in ' + seconds + 's.');
+                
+            });
+
+            //once game is reset then timer resets and countdown starts again
+            socket.on('gameReset', (data) => {
+                console.log('game reset: ' + data);
+                document.querySelector('#banner').setAttribute('value', 'The game has been reset.');
+                let colorStr = 'rgb(255, 255, 255)';
+                document.querySelector('#ground1').setAttribute('material', {color:colorStr});
+                document.querySelector('#ground2').setAttribute('material', {color:colorStr});
+                document.querySelector('#ground3').setAttribute('material', {color:colorStr});
+                document.querySelector('#ground4').setAttribute('material', {color:colorStr});
+    
+            });
+
+            //reject any players if there is already 2 on a server
+            socket.on('reject', (data) => {
+                document.querySelector('#banner').setAttribute('value', 'Max # players reached');
+                console.log('too many players on, cannot connect to game');
+                process.exit(0);
+            });
+
+            //changed banner
+            socket.on('getReady', (data) => {
+                document.querySelector('#bannerStart').setAttribute('value', 'Get Ready!');
+            });
+
+            //counts down
+            socket.on('timeLeft', (data) => {
+                let timeLeft = data;
+                document.querySelector('#bannerStart').setAttribute('value', timeLeft);
+            });
+
+            //notify players of start
+            socket.on('start', (data) => {
+                document.querySelector('#bannerStart').setAttribute('value', 'Start!');
+            });
+            
+        </script>
+    </body>
+</html>
